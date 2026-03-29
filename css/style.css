@@ -333,6 +333,14 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   margin: 32px 0 12px;
 }
 .description h3:first-child { margin-top: 0; }
+.desc-image {
+  margin-bottom: 28px;
+  max-width: 480px;
+}
+.desc-image img {
+  border-radius: 4px;
+}
+.desc-image + h3 { margin-top: 0; }
 .description p {
   margin-bottom: 16px;
   color: var(--text);
