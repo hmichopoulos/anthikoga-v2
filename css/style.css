@@ -334,13 +334,33 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 }
 .description h3:first-child { margin-top: 0; }
 .desc-image {
-  margin-bottom: 28px;
-  max-width: 480px;
+  float: right;
+  width: 300px;
+  margin: 0 0 16px 24px;
+}
+.desc-image {
+  cursor: pointer;
 }
 .desc-image img {
   border-radius: 4px;
+  transition: opacity 0.2s;
 }
-.desc-image + h3 { margin-top: 0; }
+.desc-image:hover img {
+  opacity: 0.85;
+}
+.description::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+@media (max-width: 480px) {
+  .desc-image {
+    float: none;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 0 20px 0;
+  }
+}
 .description p {
   margin-bottom: 16px;
   color: var(--text);
